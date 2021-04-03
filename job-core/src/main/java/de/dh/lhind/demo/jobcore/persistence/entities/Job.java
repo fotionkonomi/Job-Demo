@@ -9,6 +9,8 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -40,4 +42,9 @@ public class Job extends UserDependentEntity {
     @Column(name = "job_type", nullable = false)
     @Enumerated(EnumType.ORDINAL)
     private JobType jobType;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
+    @JoinTable(name = "user_jobs", joinColumns = { @JoinColumn(name = "id_job") },
+            inverseJoinColumns = { @JoinColumn(name = "id_user")})
+    private Set<User> appliedUsers = new HashSet<>();
 }

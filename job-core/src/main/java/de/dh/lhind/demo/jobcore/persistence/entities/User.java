@@ -7,6 +7,8 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -32,5 +34,6 @@ public class User extends BaseClass {
     @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role role;
 
-
+    @ManyToMany(mappedBy = "appliedUsers")
+    private Set<Job> jobsApplied = new HashSet<>();
 }

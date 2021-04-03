@@ -17,7 +17,7 @@ import javax.persistence.*;
 @Where(clause = "deleted <> 1")
 public class Role extends BaseClass {
     @Column(name = "role", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private RoleEnum role;
 
 }
