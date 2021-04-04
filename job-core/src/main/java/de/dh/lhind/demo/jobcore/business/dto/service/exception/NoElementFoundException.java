@@ -5,19 +5,19 @@ import de.dh.lhind.demo.jobcore.business.dto.service.exception.common.JobAppExce
 
 public class NoElementFoundException extends JobAppException {
     public NoElementFoundException() {
-        super(MessageConstants.MSG_ENTITY_NOT_FOUND_EXCEPTION);
+        super(MessageConstants.MSG_NO_ELEMENT_FOUND_EXCEPTION);
     }
 
     public NoElementFoundException(String message) {
-        super(MessageConstants.MSG_ENTITY_NOT_FOUND_EXCEPTION, message);
+        super(MessageConstants.MSG_NO_ELEMENT_FOUND_EXCEPTION, message);
     }
 
     public NoElementFoundException(String message, Throwable t) {
-        super(MessageConstants.MSG_ENTITY_NOT_FOUND_EXCEPTION, message, t);
+        super(MessageConstants.MSG_NO_ELEMENT_FOUND_EXCEPTION, message, t);
     }
 
     public NoElementFoundException(Throwable t) {
-        super(MessageConstants.MSG_ENTITY_NOT_FOUND_EXCEPTION, t);
+        super(MessageConstants.MSG_NO_ELEMENT_FOUND_EXCEPTION, t);
     }
 
     protected NoElementFoundException(String messageConstant, String message, Throwable t) {

@@ -1,6 +1,5 @@
 package de.dh.lhind.demo.jobcore.business.dto.service.base;
 
-import com.sun.xml.bind.v2.runtime.reflect.opt.Const;
 import de.dh.lhind.demo.jobcore.business.dto.common.BaseClassDTO;
 import de.dh.lhind.demo.jobcore.business.dto.service.exception.ConstraintException;
 import de.dh.lhind.demo.jobcore.business.dto.service.exception.EntityNotFoundException;
