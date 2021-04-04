@@ -44,16 +44,11 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
     }
 
     @Override
-    public DTO save(DTO dto) throws ConstraintException {
-        try {
-            ENTITY mappedEntity = mapFromDTO(dto);
-            mappedEntity = repo.save(mappedEntity);
-            log.info(classOfEntity.getName() + " object saved successfully: " + mappedEntity);
-            return mapFromEntity(mappedEntity);
-        } catch (DataIntegrityViolationException e) {
-            log.error(classOfEntity.getName() + " object could not be saved, exception thrown: " + e);
-            throw new ConstraintException(e.getMessage(), e);
-        }
+    public DTO save(DTO dto) {
+        ENTITY mappedEntity = mapFromDTO(dto);
+        mappedEntity = repo.save(mappedEntity);
+        log.info(classOfEntity.getName() + " object saved successfully: " + mappedEntity);
+        return mapFromEntity(mappedEntity);
     }
 
     @Override
