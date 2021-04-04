@@ -1,7 +1,10 @@
 package de.dh.lhind.demo.jobcore.business.dto.service.base;
 
+import com.sun.xml.bind.v2.runtime.reflect.opt.Const;
 import de.dh.lhind.demo.jobcore.business.dto.common.BaseClassDTO;
 import de.dh.lhind.demo.jobcore.business.dto.service.exception.ConstraintException;
+import de.dh.lhind.demo.jobcore.business.dto.service.exception.EntityNotFoundException;
+import de.dh.lhind.demo.jobcore.business.dto.service.exception.NoElementFoundException;
 import de.dh.lhind.demo.jobcore.persistence.entities.common.BaseClass;
 import de.dh.lhind.demo.jobcore.persistence.repository.ParentRepository;
 import lombok.extern.log4j.Log4j;
@@ -34,10 +37,11 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
     }
 
     @Override
-    public Optional<DTO> findById(ID id) {
+    public DTO findById(ID id) {
         Optional<ENTITY> optionalEntity = repo.findById(id);
 
-        return mapOptionalEntityToDTO(optionalEntity);
+        Optional<DTO> optionalDTO = mapOptionalEntityToDTO(optionalEntity);
+        return optionalDTO.orElseThrow(() -> new EntityNotFoundException());
     }
 
     @Override
@@ -55,7 +59,11 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
 
     @Override
     public List<DTO> findAll() {
-        return mapEntityListToDTO(repo.findAll());
+        List<DTO> dtoList = mapEntityListToDTO(repo.findAll());
+        if(dtoList != null) {
+            return dtoList;
+        }
+        throw new NoElementFoundException();
     }
 
     private ENTITY mapFromDTO(DTO dto) {

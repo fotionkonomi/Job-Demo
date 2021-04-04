@@ -1,9 +1,9 @@
-package de.dh.lhind.demo.jobcore.business.dto.service.exception;
+package de.dh.lhind.demo.jobcore.business.dto.service.exception.common;
 
 import lombok.Getter;
 import lombok.Setter;
 
-public class JobAppException extends RuntimeException {
+public abstract class JobAppException extends RuntimeException {
 
     @Getter
     @Setter
