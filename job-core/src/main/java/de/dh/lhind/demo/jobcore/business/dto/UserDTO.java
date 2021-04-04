@@ -1,6 +1,6 @@
 package de.dh.lhind.demo.jobcore.business.dto;
 
-import de.dh.lhind.demo.jobcore.business.dto.common.BaseClassDTO;
+import de.dh.lhind.demo.jobcore.business.common.BaseClassDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

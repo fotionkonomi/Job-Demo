@@ -7,6 +7,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -59,11 +60,10 @@ public class JwtUtil {
     }
 
     public MyUserDetails extractUserFromToken(String token) {
-        if (!this.validateToken(token)) {
+        if (this.isTokenExpired(token)) {
             throw new MyAuthenticationException("Token is invalid!");
         }
         Claims claims = this.extractAlClaims(token);
-        String username = claims.getSubject();
         Long id = claims.get(JWTClaims.ID_CLAIM, Long.class);
         String firstName = claims.get(JWTClaims.FIRSTNAME_CLAIM, String.class);
         String lastName = claims.get(JWTClaims.LASTNAME_CLAIM, String.class);
@@ -78,11 +78,12 @@ public class JwtUtil {
                 .build();
     }
 
-    public Boolean validateToken(String token) {
-        return !isTokenExpired(token);
+    public Boolean validateToken(String token, UserDetails userDetails) {
+        return extractUserFromToken(token).equals(userDetails) && !isTokenExpired(token);
     }
 
     private boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date(System.currentTimeMillis()));
     }
+
 }

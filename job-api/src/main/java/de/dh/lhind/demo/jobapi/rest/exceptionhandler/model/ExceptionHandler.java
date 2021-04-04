@@ -1,6 +1,7 @@
 package de.dh.lhind.demo.jobapi.rest.exceptionhandler.model;
 
-import de.dh.lhind.demo.jobcore.business.dto.service.exception.common.JobAppException;
+import de.dh.lhind.demo.jobapi.rest.exceptionhandler.HttpErrorResponse;
+import de.dh.lhind.demo.jobcore.business.service.exception.common.JobAppException;
 import lombok.extern.log4j.Log4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

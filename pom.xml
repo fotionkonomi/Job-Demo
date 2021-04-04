@@ -23,8 +23,8 @@
     </properties>
 
     <modules>
-        <module>job-core</module>
         <module>job-api</module>
+        <module>job-core</module>
     </modules>
 
     <dependencyManagement>

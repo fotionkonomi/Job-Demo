@@ -24,7 +24,7 @@ public class User extends BaseClass {
     @Column(name = "last_name", nullable = false, length = 50)
     private String lastName;
 
-    @Column(name = "email", unique = true, length = 100, nullable = false)
+    @Column(name = "email", length = 100, nullable = false)
     private String email;
 
     @Column(name = "password", nullable = false, length = 255)

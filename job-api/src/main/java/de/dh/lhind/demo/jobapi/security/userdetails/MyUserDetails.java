@@ -2,6 +2,7 @@ package de.dh.lhind.demo.jobapi.security.userdetails;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,6 +11,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 @Data
+@EqualsAndHashCode(exclude = "password")
 @Builder
 public class MyUserDetails implements UserDetails {
     private Long id;
