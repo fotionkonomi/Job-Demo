@@ -14,17 +14,13 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl extends AbstractJpaService<UserDTO, User, Long> implements UserService {
 
-    @Autowired
-    private UserRepository userRepository;
-
     public UserServiceImpl() {
         super(User.class, UserDTO.class);
     }
 
-
     @Override
     public UserDTO findByEmail(String email) throws UserNotFoundException {
-        Optional<User> optionalUser = userRepository.findByEmail(email);
+        Optional<User> optionalUser = ((UserRepository) repo).findByEmail(email);
         if(optionalUser.isPresent()) {
             return mapFromEntity(optionalUser.get());
         } else {

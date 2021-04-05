@@ -1,5 +1,6 @@
 package de.dh.lhind.demo.jobcore.business.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import de.dh.lhind.demo.jobcore.business.common.BaseClassDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class UserDTO extends BaseClassDTO {
 
     private String email;
 
+    @JsonIgnore
     private String password;
 
     private RoleDTO role;

@@ -13,8 +13,8 @@ public class Utils {
 
     private static <T extends BaseClassDTO> String objectNameWithoutDto(T dto) {
         String className = dto.getClass().getSimpleName();
-        if(className.contains("Dto")) {
-            return className.replace("Dto", "");
+        if(className.contains("DTO")) {
+            return className.replace("DTO", "");
         }
         return className;
     }

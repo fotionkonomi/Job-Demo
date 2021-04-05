@@ -6,7 +6,6 @@ import java.util.Date;
 
 @Data
 public abstract class BaseClassDTO {
-
     private Long id;
     private Date createdAt;
     private Date updatedAt;

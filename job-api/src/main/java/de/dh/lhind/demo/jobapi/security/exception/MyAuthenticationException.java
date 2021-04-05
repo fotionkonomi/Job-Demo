@@ -1,5 +1,6 @@
 package de.dh.lhind.demo.jobapi.security.exception;
 
+import de.dh.lhind.demo.jobapi.security.constant.SecurityConstants;
 import org.springframework.security.core.AuthenticationException;
 
 public class MyAuthenticationException extends AuthenticationException {
@@ -7,7 +8,7 @@ public class MyAuthenticationException extends AuthenticationException {
         super(msg, cause);
     }
 
-    public MyAuthenticationException(String msg) {
-        super(msg);
+    public MyAuthenticationException() {
+        super(SecurityConstants.TOKEN_INVALID);
     }
 }

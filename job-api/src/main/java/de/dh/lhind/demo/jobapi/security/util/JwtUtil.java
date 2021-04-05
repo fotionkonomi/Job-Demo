@@ -3,10 +3,9 @@ package de.dh.lhind.demo.jobapi.security.util;
 import de.dh.lhind.demo.jobapi.security.constant.JWTClaims;
 import de.dh.lhind.demo.jobapi.security.exception.MyAuthenticationException;
 import de.dh.lhind.demo.jobapi.security.userdetails.MyUserDetails;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
@@ -45,7 +44,7 @@ public class JwtUtil {
         long currentTimeMillis = System.currentTimeMillis();
         return Jwts.builder().setClaims(claims).setSubject(subject)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(currentTimeMillis))
+                .setExpiration(new Date(currentTimeMillis + tokenTimeValid))
                 .signWith(SignatureAlgorithm.HS256, jwtSecretKey)
                 .compact();
     }
@@ -60,8 +59,8 @@ public class JwtUtil {
     }
 
     public MyUserDetails extractUserFromToken(String token) {
-        if (this.isTokenExpired(token)) {
-            throw new MyAuthenticationException("Token is invalid!");
+        if (this.isTokenExpiredOrMalformed(token)) {
+            throw new MyAuthenticationException();
         }
         Claims claims = this.extractAlClaims(token);
         Long id = claims.get(JWTClaims.ID_CLAIM, Long.class);
@@ -79,11 +78,15 @@ public class JwtUtil {
     }
 
     public Boolean validateToken(String token, UserDetails userDetails) {
-        return extractUserFromToken(token).equals(userDetails) && !isTokenExpired(token);
+        return extractUserFromToken(token).equals(userDetails) && !isTokenExpiredOrMalformed(token);
     }
 
-    private boolean isTokenExpired(String token) {
-        return extractExpiration(token).before(new Date(System.currentTimeMillis()));
+    private boolean isTokenExpiredOrMalformed(String token) {
+        try {
+            return extractExpiration(token).before(new Date(System.currentTimeMillis()));
+        } catch(JwtException e) {
+            return true;
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-package de.dh.lhind.demo.jobapi.rest.exceptionhandler;
+package de.dh.lhind.demo.jobapi.rest.exceptionhandler.model;
 
 import lombok.Data;
 
@@ -10,6 +10,7 @@ public class HttpErrorResponse {
     private Date timestamp;
     private String path;
     private String message;
+    private String localizedMessage;
 
     public HttpErrorResponse() {
         this.timestamp = new Date();
