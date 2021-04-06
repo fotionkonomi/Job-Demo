@@ -3,10 +3,9 @@ package de.dh.lhind.demo.jobcore.business.dto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import de.dh.lhind.demo.jobcore.business.common.UserDependentDTO;
 import de.dh.lhind.demo.jobcore.persistence.entities.enums.JobType;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
@@ -16,7 +15,7 @@ public class JobDTO extends UserDependentDTO {
 
     private Double minYearsOfExperience;
 
-    @JsonBackReference
+    @NotNull
     private CompanyDTO hiringCompany;
 
     private Integer wage;

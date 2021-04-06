@@ -25,7 +25,7 @@ public class UserRestController extends CommonCrudRestController<UserDTO, Long> 
     @Override
     public ResponseEntity<Void> createObject(@RequestBody UserDTO dto) throws URISyntaxException {
         dto.setPassword(passwordEncoder.encode(dto.getPassword()));
-        dto = ((UserService)service).save(dto, ActionEnum.CREATE);
+        dto = service.save(dto);
         return ResponseEntity.created(Utils.getUriAfterPost(dto)).build();
     }
 

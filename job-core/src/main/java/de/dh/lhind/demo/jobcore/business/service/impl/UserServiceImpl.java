@@ -35,8 +35,8 @@ public class UserServiceImpl extends AbstractJpaService<UserDTO, User, Long> imp
     }
 
     @Override
-    public UserDTO save(UserDTO dto, ActionEnum createOrUpdate) {
-        if(createOrUpdate == ActionEnum.CREATE) {
+    public UserDTO save(UserDTO dto) {
+        if(dto.getId() == null) {
             UserDTO existingUser = this.findByEmailOrNull(dto.getEmail());
             if(existingUser != null) {
                 throw new EmailViolationException();

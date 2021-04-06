@@ -8,10 +8,7 @@ import de.dh.lhind.demo.jobcore.business.service.exception.NoElementFoundExcepti
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -34,6 +31,17 @@ public abstract class CommonCrudRestController<DTO extends BaseClassDTO, ID> {
     public ResponseEntity<Void> createObject(@RequestBody DTO dto) throws URISyntaxException {
         dto = service.save(dto);
         return ResponseEntity.created(Utils.getUriAfterPost(dto)).build();
+    }
+
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> updateObject(@RequestBody DTO dto) throws URISyntaxException {
+        dto = service.save(dto);
+        return ResponseEntity.created(Utils.getUriAfterPost(dto)).build();
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteObject(@PathVariable("id") ID id) throws EntityNotFoundException {
+        this.service.deleteById(id);
     }
 
 }

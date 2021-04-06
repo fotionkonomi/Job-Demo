@@ -7,6 +7,4 @@ import de.dh.lhind.demo.jobcore.business.service.exception.UserNotFoundException
 
 public interface UserService extends BaseService<UserDTO, Long> {
     UserDTO findByEmail(final String email) throws UserNotFoundException;
-
-    UserDTO save(UserDTO userDTO, ActionEnum createOrUpdate);
 }

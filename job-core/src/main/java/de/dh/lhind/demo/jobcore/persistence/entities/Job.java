@@ -24,7 +24,7 @@ public class Job extends UserDependentEntity {
     @Column(name = "min_years_of_experience", nullable = false)
     private Double minYearsOfExperience;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "hiring_company_id")
     private Company hiringCompany;
 
@@ -43,7 +43,7 @@ public class Job extends UserDependentEntity {
     @Enumerated(EnumType.ORDINAL)
     private JobType jobType;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.ALL })
+    @ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.MERGE })
     @JoinTable(name = "user_jobs", joinColumns = { @JoinColumn(name = "id_job") },
             inverseJoinColumns = { @JoinColumn(name = "id_user")})
     private Set<User> appliedUsers = new HashSet<>();

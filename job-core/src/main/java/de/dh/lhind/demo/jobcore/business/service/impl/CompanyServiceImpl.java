@@ -11,4 +11,5 @@ public class CompanyServiceImpl extends AbstractJpaService<CompanyDTO, Company, 
     public CompanyServiceImpl() {
         super(Company.class, CompanyDTO.class);
     }
+
 }

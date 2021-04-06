@@ -51,11 +51,17 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
 
     @Override
     public List<DTO> findAll() {
-        List<DTO> dtoList = mapEntityListToDTO(repo.findAll());
+        List<ENTITY> entityList = repo.findAll();
+        List<DTO> dtoList = mapEntityListToDTO(entityList);
         if(dtoList != null) {
             return dtoList;
         }
         throw new NoElementFoundException();
+    }
+
+    @Override
+    public void deleteById(ID id) {
+        this.repo.deleteById(id);
     }
 
     private ENTITY mapFromDTO(DTO dto) {

@@ -31,7 +31,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword()));
             final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
-            return new AuthenticationResponse(jwtUtil.generateToken((MyUserDetails) userDetails));
+            AuthenticationResponse authenticationResponse = new AuthenticationResponse(jwtUtil.generateToken((MyUserDetails) userDetails));
+            return authenticationResponse;
         } catch(BadCredentialsException e) {
             throw new MyBadCredentialsException();
         }
