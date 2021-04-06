@@ -19,7 +19,6 @@ public class UserDTO extends BaseClassDTO {
 
     private String email;
 
-    @JsonIgnore
     private String password;
 
     private RoleDTO role;

@@ -30,7 +30,7 @@ public class User extends BaseClass {
     @Column(name = "password", nullable = false, length = 255)
     private String password;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role role;
 

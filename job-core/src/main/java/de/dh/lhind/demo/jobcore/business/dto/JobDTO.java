@@ -2,7 +2,7 @@ package de.dh.lhind.demo.jobcore.business.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import de.dh.lhind.demo.jobcore.business.common.UserDependentDTO;
-import de.dh.lhind.demo.jobcore.business.dto.enums.JobType;
+import de.dh.lhind.demo.jobcore.persistence.entities.enums.JobType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

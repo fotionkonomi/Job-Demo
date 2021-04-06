@@ -1,6 +1,6 @@
 package de.dh.lhind.demo.jobcore.business.service.exception;
 
-import de.dh.lhind.demo.jobcore.business.service.constants.MessageConstants;
+import de.dh.lhind.demo.jobcore.business.service.common.constants.MessageConstants;
 import de.dh.lhind.demo.jobcore.business.service.exception.common.JobAppException;
 
 public class ConstraintException extends JobAppException {

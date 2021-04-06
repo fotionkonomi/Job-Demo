@@ -2,33 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddb58ce7-037d-435f-a2da-039175aa4372" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/util/ExceptionMessageUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/util/ExceptionMessageUtilImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/exception/MyBadCredentialsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/exception/handler/MyAuthHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/common/ActionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/EmailViolationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/JobApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/JobApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/JobApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/JobApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/HttpErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/model/HttpErrorResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/model/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/ExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/constant/SecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/constant/SecurityConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/exception/MyAuthenticationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/exception/MyAuthenticationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/service/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/service/AuthenticationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/util/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/ExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/exceptionhandler/ExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job-api/src/main/resources/exception_messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/job-api/src/main/resources/exception_messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/common/BaseClassDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/common/BaseClassDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/JobDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/JobDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/RoleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/RoleDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/enums/JobType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/dto/enums/RoleEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/constants/MessageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/common/constants/MessageConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/ConstraintException.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/ConstraintException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/EntityNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/EntityNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/NoElementFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/NoElementFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/CompanyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/RoleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/JobRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/persistence/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job-core/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/job-core/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +83,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/taco-cloud" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -161,91 +158,106 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617388584246" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1617619964513">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1617712030094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2685" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617556865932" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712030094" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1617619964513" />
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1617388566042">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2728" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617388566042" />
-    <state x="2367" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1617567255205">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="447" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1617711035262">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2367" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617567255205" />
+    <state x="447" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617711035262" />
     <state x="447" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617527626459" />
     <state x="761" y="409" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617527629300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="409" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1617527629300" />
-    <state width="1026" height="466" key="DebuggerActiveHint" timestamp="1617618623752">
+    <state width="1026" height="466" key="DebuggerActiveHint" timestamp="1617710425163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1026" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617710425163" />
     <state width="1026" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1617618623752" />
     <state x="2660" y="221" key="FileChooserDialogImpl" timestamp="1617388409313">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="221" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617388409313" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1617640034651">
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom" timestamp="1617712484767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902880" />
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484767" />
     <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034651" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1617640034651">
+    <state width="1877" height="258" key="GridCell.Tab.0.center" timestamp="1617712484766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902880" />
+    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484766" />
     <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034651" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1617640034651">
+    <state width="1877" height="258" key="GridCell.Tab.0.left" timestamp="1617712484766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902880" />
+    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484766" />
     <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034651" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1617640034651">
+    <state width="1877" height="258" key="GridCell.Tab.0.right" timestamp="1617712484766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902880" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484766" />
     <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034651" />
-    <state width="1877" height="285" key="GridCell.Tab.1.bottom" timestamp="1617640101462">
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617640101462" />
-    <state width="1877" height="285" key="GridCell.Tab.1.center" timestamp="1617640101462">
+    <state width="1877" height="258" key="GridCell.Tab.1.center" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617640101462" />
-    <state width="1877" height="285" key="GridCell.Tab.1.left" timestamp="1617640101462">
+    <state width="1877" height="258" key="GridCell.Tab.1.left" timestamp="1617712484622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484622" />
     <state width="1877" height="285" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617640101462" />
-    <state width="1877" height="285" key="GridCell.Tab.1.right" timestamp="1617640101462">
+    <state width="1877" height="258" key="GridCell.Tab.1.right" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617640101462" />
-    <state width="1877" height="285" key="GridCell.Tab.2.bottom" timestamp="1617640034465">
+    <state width="1877" height="258" key="GridCell.Tab.2.bottom" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034465" />
-    <state width="1877" height="285" key="GridCell.Tab.2.center" timestamp="1617640034465">
+    <state width="1877" height="258" key="GridCell.Tab.2.center" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034465" />
-    <state width="1877" height="285" key="GridCell.Tab.2.left" timestamp="1617640034465">
+    <state width="1877" height="258" key="GridCell.Tab.2.left" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034465" />
-    <state width="1877" height="285" key="GridCell.Tab.2.right" timestamp="1617640034465">
+    <state width="1877" height="258" key="GridCell.Tab.2.right" timestamp="1617712484625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="399" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617576902729" />
+    <state width="1877" height="258" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617712484625" />
     <state width="1877" height="285" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617640034465" />
     <state x="2410" y="175" key="Maven.ArtifactSearchDialog" timestamp="1617560595193">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -260,23 +272,27 @@
     </state>
     <state x="2381" y="162" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617390424446" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617522613351" />
-    <state x="2695" y="301" key="chooseDestDirectoryDialog" timestamp="1617571849816">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="775" y="301" key="chooseDestDirectoryDialog" timestamp="1617711073692">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2695" y="301" key="chooseDestDirectoryDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617571849816" />
+    <state x="775" y="301" key="chooseDestDirectoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617711073692" />
     <state x="591" y="65" width="737" height="909" key="find.popup" timestamp="1617619716274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2511" y="65" width="737" height="909" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617568195979" />
     <state x="591" y="65" width="737" height="909" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617619716274" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1617638730446">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1617710975586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617710975586" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617638730446" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617638883747">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617715431231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617575105738" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1617715431231" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1617663364783" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617638883747" />
   </component>
   <component name="XDebuggerManager">
@@ -306,6 +322,21 @@
           <url>file://$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/security/util/JwtUtil.java</url>
           <line>62</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/AuthenticationController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-api/src/main/java/de/dh/lhind/demo/jobapi/rest/controller/UserRestController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-core/src/main/java/de/dh/lhind/demo/jobcore/business/service/impl/UserServiceImpl.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -40,7 +40,7 @@ public class ExceptionHandler {
         HttpStatus errorStatus = HttpStatus.INTERNAL_SERVER_ERROR;
         httpErrorResponse.setErrorCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
         httpErrorResponse.setPath(request.getRequestURI());
-        httpErrorResponse.setMessage(errorStatus.getReasonPhrase());
+        httpErrorResponse.setMessage("JobApiBE" + errorStatus.getReasonPhrase());
         return ResponseEntity.status(errorStatus).body(httpErrorResponse);
     }
 
