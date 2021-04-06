@@ -16,7 +16,7 @@ public abstract class BaseClass {
     private Long id;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, columnDefinition = "DATETIME")
+    @Column(updatable = false, columnDefinition = "DATETIME")
     private Date createdAt;
 
     @Temporal(TemporalType.TIMESTAMP)

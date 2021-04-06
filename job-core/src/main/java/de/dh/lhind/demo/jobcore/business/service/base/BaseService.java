@@ -12,4 +12,6 @@ public interface BaseService<DTO, ID> {
     DTO save(DTO dto);
 
     List<DTO> findAll() throws NoElementFoundException;
+
+    void deleteById(ID id);
 }
