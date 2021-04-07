@@ -15,7 +15,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "job")
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true, exclude = "appliedUsers")
 @SQLDelete(sql = "UPDATE job SET deleted = 1 WHERE ID = ?")
 @Where(clause = "deleted <> '1'")
 @ToString(onlyExplicitlyIncluded = true)
@@ -47,4 +47,9 @@ public class Job extends UserDependentEntity {
     @JoinTable(name = "user_jobs", joinColumns = { @JoinColumn(name = "id_job") },
             inverseJoinColumns = { @JoinColumn(name = "id_user")})
     private Set<User> appliedUsers = new HashSet<>();
+
+    public void addUser(User user) {
+        this.appliedUsers.add(user);
+        user.getJobsApplied().add(this);
+    }
 }

@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper = true, exclude = "jobsApplied")
 @Entity
 @Table(name = "user")
 @SQLDelete(sql = "UPDATE user SET deleted = 1 WHERE ID = ?")
