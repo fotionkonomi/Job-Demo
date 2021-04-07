@@ -5,15 +5,15 @@ import de.dh.lhind.demo.jobapi.security.userdetails.MyUserDetails;
 import de.dh.lhind.demo.jobcore.business.dto.CompanyDTO;
 import de.dh.lhind.demo.jobcore.business.dto.JobDTO;
 import de.dh.lhind.demo.jobcore.business.dto.UserDTO;
+import de.dh.lhind.demo.jobcore.business.service.JobService;
 import de.dh.lhind.demo.jobcore.business.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
+import java.util.Collection;
 
 @RestController
 @RequestMapping("/job")
@@ -36,5 +36,29 @@ public class JobController extends CommonCrudRestController<JobDTO, Long> {
         UserDTO userDTO = userService.findByEmail(userDetails.getEmail());
         dto.setUpdatedBy(userDTO);
         return super.updateObject(dto);
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<Collection<JobDTO>> filteredJobs(@RequestParam("query") String query) {
+        MyUserDetails userDetails = (MyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return ResponseEntity.ok(((JobService)service).filterByDescription(query, userDetails.getId()));
+    }
+
+    @GetMapping("/topTen")
+    public ResponseEntity<Collection<JobDTO>> topTenJobs() {
+        MyUserDetails userDetails = (MyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return ResponseEntity.ok(((JobService)service).find10LatestJobs(userDetails.getId()));
+    }
+
+    @PutMapping("/apply")
+    public ResponseEntity<JobDTO> userApplication(@RequestBody Long jobId) {
+        MyUserDetails userDetails = (MyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return ResponseEntity.ok(((JobService) service).saveUser(jobId, userDetails.getId()));
+    }
+
+    @GetMapping("/myApplications")
+    public ResponseEntity<Collection<JobDTO>> getUserApplications() {
+        MyUserDetails userDetails = (MyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return ResponseEntity.ok(((JobService) service).getJobsAppliedByUser(userDetails.getId()));
     }
 }

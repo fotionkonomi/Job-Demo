@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,7 +65,7 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
         this.repo.deleteById(id);
     }
 
-    private ENTITY mapFromDTO(DTO dto) {
+    protected ENTITY mapFromDTO(DTO dto) {
         return modelMapper.map(dto, classOfEntity);
     }
 
@@ -76,7 +77,7 @@ public abstract class AbstractJpaService<DTO extends BaseClassDTO, ENTITY extend
         return Optional.ofNullable(optionalEntity.isPresent() ? mapFromEntity(optionalEntity.get()) : null);
     }
 
-    private List<DTO> mapEntityListToDTO(List<ENTITY> entityList) {
+    protected List<DTO> mapEntityListToDTO(Collection<ENTITY> entityList) {
         List<DTO> dtoList = new ArrayList<>();
         entityList.forEach(entity -> dtoList.add(mapFromEntity(entity)));
         return dtoList;
